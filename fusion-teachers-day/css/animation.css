@@ -1,0 +1,21 @@
+@keyframes suggestionAppear { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes envelopeEnter { from { opacity: 0; transform: translateY(18px) scale(.94); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes envelopeFloat { from { translate: 0 0; } to { translate: 0 -7px; } }
+@keyframes envelopeNudge { 0% { translate: 0 0; } 45% { translate: 0 7px; } 100% { translate: 0 0; } }
+@keyframes envelopeFade { 0%, 80% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes flapOpen { 0%, 16% { transform: rotateX(0); z-index: 4; } 50%, 100% { transform: rotateX(180deg); z-index: 1; } }
+@keyframes sealFade { 0%, 12% { opacity: 1; } 24%, 100% { opacity: 0; } }
+@keyframes letterLift { 0%, 38% { transform: translateY(0); } 70% { transform: translateY(-65%); } 100% { transform: translateY(-78%) scale(1.28); } }
+@keyframes frontFade { 0%, 70% { opacity: 1; } 100% { opacity: .16; } }
+@keyframes cardAppear { from { opacity: 0; transform: translateY(16px) scale(.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
+
+.envelope-stage:not(.is-opening) { animation: envelopeEnter .8s both, envelopeFloat 5s ease-in-out .8s infinite alternate; }
+.envelope-stage.is-opening { animation: envelopeNudge .3s ease-out both, envelopeFade 2.4s linear forwards; }
+.envelope-stage.is-opening .stage-seal { animation: sealFade 2.35s ease-in-out forwards; }
+.envelope-stage.is-opening .stage-flap { animation: flapOpen 2.35s ease-in-out forwards; }
+.envelope-stage.is-opening .stage-letter { animation: letterLift 2.35s cubic-bezier(.2,.7,.2,1) forwards; }
+.envelope-stage.is-opening .stage-front { animation: frontFade 2.35s ease-in forwards; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}

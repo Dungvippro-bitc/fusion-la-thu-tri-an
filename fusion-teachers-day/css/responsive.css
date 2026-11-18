@@ -1,0 +1,37 @@
+@media (max-width: 767.98px) {
+  .floral--top-left, .floral--bottom-right, .sparkle { display: none; }
+  .floral--top-right { top: -35px; right: -70px; }
+  .floral--bottom-left { bottom: -45px; left: -70px; }
+  .site-header { padding-top: 14px; }
+  .header-logos { gap: 16px; }
+  .brand-logo { height: 60px; }
+  .partner-logo { height: 55px; }
+  .screen--welcome { padding-block: 38px 65px; }
+  .welcome-panel::before, .welcome-panel::after { display: none; }
+  h1 { font-size: clamp(45px, 12vw, 68px); }
+  .welcome-message { margin-bottom: 27px; }
+  .search-results { max-height: 35svh; }
+  .screen--envelope, .screen--card { justify-content: flex-start; padding-top: 45px; padding-bottom: 60px; }
+  .envelope-stage { margin-top: 30px; }
+  .card-inner { min-height: 420px; }
+  .card-greeting { line-height: 1.75; }
+  .site-footer { flex-direction: column; align-items: center; text-align: center; }
+}
+
+@media (max-width: 420px) {
+  .site-header, .site-footer { padding-inline: 18px; }
+  main { padding-inline: 18px !important; }
+  .header-logos { gap: 12px; }
+  .brand-logo { height: 51px; }
+  .partner-logo { height: 47px; }
+  .welcome-flower { margin-bottom: 12px; }
+  .input-group-custom { height: 56px; }
+  .input-group-custom input { font-size: 13px; }
+  .envelope-intro { margin-top: 18px; }
+  .envelope-area { padding: 8px 0; }
+  .envelope-stage { width: min(100%, 350px); }
+  .stage-letter { padding: 16px; font-size: 9px; }
+  .card-kicker { letter-spacing: .04em; }
+  .card-inner { padding-inline: 9px; }
+  .card-greeting { font-size: 14px; }
+}
